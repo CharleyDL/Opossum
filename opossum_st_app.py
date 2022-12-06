@@ -26,7 +26,8 @@ def predict(hdlngth, skullw, totlngth, eye, chest, belly):
   prediction = model.predict(input_predict)
   prediction = str(prediction)[2:-2]  # del the double bracket
 
-  return int(round(float(prediction), ndigits=0))
+  # On ajoute les 2 ans pour compenser l'erreur d'estimation du modèle
+  return int(round(float(prediction), ndigits=0) + 2)
 
 
 
