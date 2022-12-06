@@ -11,7 +11,7 @@ import streamlit as st
 
 #--------------------------------#
 #load model ML - Social Network
-model = joblib.load('opossum_joblib')
+model = joblib.load('model/opossum_joblib')
 
 
 @st.cache    # Caching the model for fast loading
