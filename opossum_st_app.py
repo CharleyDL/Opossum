@@ -23,11 +23,10 @@ def predict(hdlngth, skullw, totlngth, eye, chest, belly):
   input_predict = np.array([hdlngth, skullw, totlngth, eye, chest, belly])
   input_predict = input_predict.reshape(1, -1)
 
-  prediction = model.predict(input_predict)
+  prediction = (model['Model']).predict((model['Scaler']).transform(input_predict))
   prediction = str(prediction)[2:-2]  # del the double bracket
 
-  # On ajoute les 2 ans pour compenser l'erreur d'estimation du modèle
-  return int(round(float(prediction), ndigits=0) + 2)
+  return int(round(float(prediction), ndigits=0))
 
 
 
