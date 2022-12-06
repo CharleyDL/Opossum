@@ -62,28 +62,28 @@ col1, col2, col3 = st.columns(3)
 ### First Row 
 with col1:
   st.header("Head Length")
-  hdlngth = st.number_input("", min_value=70, max_value=110)
+  hdlngth = st.number_input("", min_value=70, max_value=110, format="%.1f")
 
 with col2:
   st.header("Skull Width")
-  skullw = st.number_input("", min_value=50, max_value=70)
+  skullw = st.number_input("", min_value=50, max_value=70, format="%.1f")
 
 with col3:
   st.header("Total Length")
-  totlngth = st.number_input("", min_value=70, max_value=100)
+  totlngth = st.number_input("", min_value=70, max_value=100, format="%.1f")
 
 ### Second Row
 with col1:
   st.header("Eye Size")
-  eye = st.number_input("", min_value=10, max_value=20)
+  eye = st.number_input("", min_value=10, max_value=20, format="%.1f")
 
 with col2:
   st.header("Chest Size")
-  chest = st.number_input("", min_value=20, max_value=35)
+  chest = st.number_input("", min_value=20, max_value=35, format="%.2f")
 
 with col3:
   st.header("Belly Size")
-  belly = st.number_input("", min_value=25, max_value=40)
+  belly = st.number_input("", min_value=25, max_value=40, format="%.1f")
 
 
 #Button
